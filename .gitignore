@@ -1,0 +1,10 @@
+# Documentos originais (currículo, carta, transcrições) — não publicar.
+# O CV publicado é a cópia em assets/haruan-justino-cv.pdf
+media/
+
+# Configuração local do Claude Code
+.claude/settings.local.json
+
+# Lixo de sistema
+Thumbs.db
+.DS_Store

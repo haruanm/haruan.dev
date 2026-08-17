@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# The article template is not a page.
+Disallow: /blog/_template.html
+
+Sitemap: https://haruanm.github.io/sitemap.xml
