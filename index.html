@@ -147,8 +147,9 @@
           <p>
             I lead engineering on <strong>AP Classroom</strong>, College Board's platform for AP
             teachers and students, at <strong>Finetune (A Prometric Company)</strong>. Recent work:
-            redefining the data scoring partitions that made retrieval 3× faster, and architecting
-            the merge of the platform's two most heavily used teacher-facing pages.
+            redesigning the partitioning strategy for its largest dataset — roughly 3 billion score
+            records and growing ~20% a year — for 3× faster retrieval, and architecting the merge of
+            the platform's two most heavily used teacher-facing pages.
           </p>
           <p>
             Before that I spent a year at <strong>Wiley</strong> building things fast. A medical
@@ -196,9 +197,9 @@
           </div>
           <p class="job-context">AP Classroom — College Board's platform for AP teachers and students.</p>
           <ul class="job-list">
-            <li>Redefined data scoring partitions, improving data retrieval speeds by 3×, and ran cost-estimation POCs to guide infrastructure and performance trade-offs.</li>
-            <li>Architected and led the merge of AP Classroom's two most heavily used teacher-facing pages, improving performance and simplifying teacher workflows.</li>
-            <li>Lead engineering workflows across distributed teams, balancing feature delivery with technical sustainability.</li>
+            <li>Redesigned the partitioning strategy for the platform's largest dataset — ~3B score records and growing ~20% annually — on an S3 data lake queried via Redshift Spectrum, optimizing Parquet partitions for a new administrator- and coordinator-facing report at far larger scale, achieving 3× faster retrieval in testing; ran cost-estimation POCs to guide infrastructure trade-offs.</li>
+            <li>Architected the technical approach and led implementation of an epic merging AP Classroom's two most heavily used teacher-facing pages in React, working across legacy JavaScript and modern TypeScript, improving teacher workflows and platform performance.</li>
+            <li>Lead agile engineering workflows across a fully distributed remote team building a distributed system of services exposing REST and GraphQL (Graphene) APIs, balancing feature delivery with technical sustainability.</li>
           </ul>
         </li>
 
@@ -211,11 +212,12 @@
             <time>10/2024 — 09/2025</time>
           </div>
           <ul class="job-list">
-            <li>Delivered a medical knowledge base API in two weeks with Python and AWS Chalice, powering the debut of Wiley's Life Sciences AI Agent at an AWS event — 45 press articles, 145M monthly unique visitors of combined reach.</li>
+            <li>Architected a large-scale data platform in Java, Spring Boot and Hexagonal Architecture, processing millions of scientific articles — extracting licensing, territory and publication metadata and computing content metrics for clients building LLM training datasets and RAG applications. Its engineering standards were adopted across multiple teams.</li>
+            <li>Designed the platform's DAG-based orchestration on Airflow running on Kubernetes — pipeline structure, task dependencies and triggering strategy — and wrote the Python executed by each task.</li>
+            <li>Delivered a medical knowledge base API in two weeks with Python, AWS Chalice, Amazon Bedrock Knowledge Bases and OpenSearch, powering the debut of Wiley's Life Sciences AI Agent at an AWS event — 45 press articles, 145M monthly unique visitors of combined reach.</li>
             <li>Built a Model Context Protocol (MCP) integration on top of that API in days, enabling and solidifying Wiley's strategic technology partnership with Anthropic.</li>
-            <li>Architected a large-scale data platform in Java, Spring Boot and Hexagonal Architecture, processing millions of scientific articles — extracting licensing metadata and computing content metrics for clients building LLM training datasets and RAG applications. Its engineering standards were adopted across multiple teams.</li>
-            <li>Led the team to deliver the core data platform on schedule with the company's top performance metrics: fastest PR turnaround, optimized test durations, highest code quality.</li>
-            <li>Integrated AI-assisted development with Claude, MCP, Copilot and Playwright, accelerating the lifecycle and improving automated test reliability.</li>
+            <li>Led a team of consultancy-provided engineers — hiring, mentoring and performance management — through an agile SDLC enriched with Lean and XP, delivering the core data platform on schedule with the company's top performance metrics: fastest PR turnaround, optimized test durations, highest code quality. Shared the team's processes company-wide through internal workshops.</li>
+            <li>Set the team's standard for responsible AI-assisted development — Claude, MCP, Copilot for code review, Playwright for test automation — and shipped a behavioral code analysis tool based on Adam Tornhill's hotspot methodology to guide technical-debt prioritization.</li>
           </ul>
         </li>
 
@@ -228,9 +230,11 @@
             <time>04/2022 — 09/2024</time>
           </div>
           <ul class="job-list">
-            <li>Optimized critical Spark jobs, cutting execution times by nearly 50% and accelerating data availability and pipeline throughput.</li>
+            <li>Designed the reporting architecture for the platform's largest dataset — Redshift Spectrum external tables over Parquet on the S3 data lake, partitioned by classroom to serve student- and teacher-facing score reports.</li>
+            <li>Implemented core stages of the platform's layered Glue/PySpark ETL pipeline, where each stage produces inspectable, logged intermediate files, enabling recovery from any failure point without rerunning the full pipeline.</li>
+            <li>Optimized critical PySpark jobs, cutting execution times by nearly 50% and accelerating data availability and pipeline throughput.</li>
             <li>Contributed to the Architecture Council, defining the platform's long-term architectural vision and technology roadmap.</li>
-            <li>Implemented collaborative assessment sharing, significantly reducing rework in assessment creation.</li>
+            <li>Implemented collaborative assessment sharing with Python (Flask), React, PostgreSQL and REST/GraphQL APIs, significantly reducing rework in assessment creation.</li>
             <li>Integrated Mock-SQS into local development, eliminating AWS infrastructure costs during development and streamlining testing.</li>
           </ul>
         </li>
@@ -331,6 +335,7 @@
             <li class="lvl-2">Flask · AWS Chalice</li>
             <li class="lvl-2">Spring Boot</li>
             <li class="lvl-2">Vue.js</li>
+            <li class="lvl-2">GraphQL (Graphene)</li>
           </ul>
         </article>
 
@@ -342,6 +347,7 @@
             <li class="lvl-1">Snowflake</li>
             <li class="lvl-1">Docker</li>
             <li class="lvl-2">Glue · Redshift · CloudFront</li>
+            <li class="lvl-2">Airflow · Kubernetes</li>
             <li class="lvl-2">Nginx</li>
           </ul>
         </article>
@@ -362,6 +368,7 @@
             <li class="lvl-1">Model Context Protocol</li>
             <li class="lvl-1">RAG</li>
             <li class="lvl-1">Claude</li>
+            <li class="lvl-2">Amazon Bedrock · OpenSearch</li>
             <li class="lvl-2">Copilot · Cursor</li>
             <li class="lvl-2">Playwright</li>
           </ul>
